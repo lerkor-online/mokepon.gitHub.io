@@ -39,8 +39,8 @@ app.get("/unirse", (req, res) => {
 
     jugadores.push(jugador)
 
-    res.setHeader("Access-Control-Allow-Origin", "*" )
-    /* res.setHeader("Access-Control-Allow-Origin", "https://mokepon-git-hub-io-iota.vercel.app" ) */
+    /* res.setHeader("Access-Control-Allow-Origin", "*" ) */
+    res.setHeader("Access-Control-Allow-Origin", "https://mokepon-git-hub-io-iota.vercel.app" )
 
     res.send(id)
 })
@@ -86,6 +86,7 @@ app.post("/mokepon/:jugadorId/ataques", (req, res) => {
     if (jugadorIndex >= 0) {
         jugadores[jugadorIndex].asignarAtaques(ataques)
     }
+    
     res.end()
 })
 
