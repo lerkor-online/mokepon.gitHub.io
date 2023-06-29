@@ -395,7 +395,7 @@ function pintarCanvas() {
 }
 
 function enviarPosicion(x, y) {
-    fetch(`https://mokepongithubio-production.up.railway.app/${jugadorId}/posicion`, {
+    fetch(`https://mokepongithubio-production.up.railway.app/mokepon/${jugadorId}/posicion`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
