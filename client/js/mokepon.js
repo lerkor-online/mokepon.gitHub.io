@@ -142,7 +142,7 @@ function iniciarjuego() {
 }
 
 function unirseAlJuego() {
-    fetch("https://mokepongithubio-production.up.railway.app/unirse")
+    fetch("http://localhost:3001/unirse")
         .then(function(res) {
             if (res.ok) {
                 res.text()
@@ -180,7 +180,7 @@ function seleccionarMascotaJugador() {
 }
 
 function seleccionarMokepon(mascotaJugador) {
-    fetch(`https://mokepongithubio-production.up.railway.app/mokepon/${jugadorId}`, {
+    fetch(`http://localhost:3001/mokepon/${jugadorId}`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -242,7 +242,7 @@ function secuenciaAtaque () {
 }
 
 function enviarAtaques() {
-    fetch(`https://mokepongithubio-production.up.railway.app/mokepon/${jugadorId}/ataques`, {
+    fetch(`http://localhost:3001/mokepon/${jugadorId}/ataques`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -255,7 +255,7 @@ function enviarAtaques() {
 }
 
 function obtenerAtaques() {
-    fetch(`https://mokepongithubio-production.up.railway.app/mokepon/${enemigoId}/ataques`)
+    fetch(`http://localhost:3001/mokepon/${enemigoId}/ataques`)
         .then(function (res) {
             if (res.ok) {
                 res.json()
@@ -395,7 +395,7 @@ function pintarCanvas() {
 }
 
 function enviarPosicion(x, y) {
-    fetch(`https://mokepongithubio-production.up.railway.app/mokepon/${jugadorId}/posicion`, {
+    fetch(`http://localhost:3001/mokepon/${jugadorId}/posicion`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -417,11 +417,11 @@ function enviarPosicion(x, y) {
                         const mokeponNombre = enemigo.mokepon.nombre || ""
                         
                         if (mokeponNombre === "Hipodoge") {
-                            mokeponEnemigo = new Mokepon('Hipodoge', './Assets/mokepons_mokepon_hipodoge_attack.png', 5, './assets/hipodoge.png', enemigo.id)
+                            mokeponEnemigo = new Mokepon('Hipodoge', './Assets/mokepons_mokepon_hipodoge_attack.png', 5, './Assets/hipodoge.png', enemigo.id)
                         } else if (mokeponNombre === "Capipepo") {
-                            mokeponEnemigo = new Mokepon('Capipepo', './Assets/mokepons_mokepon_capipepo_attack.png', 5, './assets/capipepo.png', enemigo.id)
+                            mokeponEnemigo = new Mokepon('Capipepo', './Assets/mokepons_mokepon_capipepo_attack.png', 5, './Assets/capipepo.png', enemigo.id)
                         } else if (mokeponNombre === "Ratigueya") {
-                            mokeponEnemigo = new Mokepon('Ratigueya', './Assets/mokepons_mokepon_ratigueya_attack.png', 5, './assets/ratigueya.png', enemigo.id)
+                            mokeponEnemigo = new Mokepon('Ratigueya', './Assets/mokepons_mokepon_ratigueya_attack.png', 5, './Assets/ratigueya.png', enemigo.id)
                         }
                         
                     
