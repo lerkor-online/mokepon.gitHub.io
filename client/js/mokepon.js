@@ -142,7 +142,7 @@ function iniciarjuego() {
 }
 
 function unirseAlJuego() {
-    fetch("http://localhost:3001/unirse")
+    fetch("https://mokepongithubio-production.up.railway.app/unirse")
         .then(function(res) {
             if (res.ok) {
                 res.text()
@@ -180,7 +180,7 @@ function seleccionarMascotaJugador() {
 }
 
 function seleccionarMokepon(mascotaJugador) {
-    fetch(`http://localhost:3001/mokepon/${jugadorId}`, {
+    fetch(`https://mokepongithubio-production.up.railway.app/${jugadorId}`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -242,7 +242,7 @@ function secuenciaAtaque () {
 }
 
 function enviarAtaques() {
-    fetch(`http://localhost:3001/mokepon/${jugadorId}/ataques`, {
+    fetch(`https://mokepongithubio-production.up.railway.app/${jugadorId}/ataques`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -255,7 +255,7 @@ function enviarAtaques() {
 }
 
 function obtenerAtaques() {
-    fetch(`http://localhost:3001/mokepon/${enemigoId}/ataques`)
+    fetch(`https://mokepongithubio-production.up.railway.app/${enemigoId}/ataques`)
         .then(function (res) {
             if (res.ok) {
                 res.json()
@@ -395,7 +395,7 @@ function pintarCanvas() {
 }
 
 function enviarPosicion(x, y) {
-    fetch(`http://localhost:3001/mokepon/${jugadorId}/posicion`, {
+    fetch(`https://mokepongithubio-production.up.railway.app/${jugadorId}/posicion`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
