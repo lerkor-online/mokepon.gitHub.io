@@ -417,11 +417,11 @@ function enviarPosicion(x, y) {
                         const mokeponNombre = enemigo.mokepon.nombre || ""
                         
                         if (mokeponNombre === "Hipodoge") {
-                            mokeponEnemigo = new Mokepon('Hipodoge', './assets/mokepons_mokepon_hipodoge_attack.png', 5, './assets/hipodoge.png')
+                            mokeponEnemigo = new Mokepon('Hipodoge', './assets/mokepons_mokepon_hipodoge_attack.png', 5, 'https://drive.google.com/file/d/1FaB8dP4KtCVDhgHQIMiuTrdrdgjJstuA/view')
                         } else if (mokeponNombre === "Capipepo") {
-                            mokeponEnemigo = new Mokepon('Capipepo', './assets/mokepons_mokepon_capipepo_attack.png', 5, './assets/capipepo.png')
+                            mokeponEnemigo = new Mokepon('Capipepo', './assets/mokepons_mokepon_capipepo_attack.png', 5, 'https://drive.google.com/file/d/1FrY-CK-iJ5f3-FFxuRug4_CXitz19e-P/view')
                         } else if (mokeponNombre === "Ratigueya") {
-                            mokeponEnemigo = new Mokepon('Ratigueya', './assets/mokepons_mokepon_ratigueya_attack.png', 5, './assets/ratigueya.png')
+                            mokeponEnemigo = new Mokepon('Ratigueya', './assets/mokepons_mokepon_ratigueya_attack.png', 5, 'https://drive.google.com/file/d/1Sdqujy7BetG1NxPNZcxXXvQDRxd00IB6/view')
                         }
                         
                     
