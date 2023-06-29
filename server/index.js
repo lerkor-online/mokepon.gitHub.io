@@ -39,7 +39,8 @@ app.get("/unirse", (req, res) => {
 
     jugadores.push(jugador)
 
-    res.setHeader("Access-Control-Allow-Origin", "https://mokepon-git-hub-io.vercel.app" )
+    res.setHeader("Access-Control-Allow-Origin", "*" )
+    /* res.setHeader("Access-Control-Allow-Origin", "https://mokepon-git-hub-io.vercel.app" ) */
 
     res.send(id)
 })
@@ -59,16 +60,17 @@ app.post("/mokepon/:jugadorId", (req, res) => {
     res.end()
 })
 
-app.post("/mokepon/:jugadorId/posicion", (req,res) => {
+app.post("/mokepon/:jugadorId/posicion", (req, res) => {
     const jugadorId = req.params.jugadorId || ""
     const x = req.body.x || 0
     const y = req.body.y || 0
+
     const jugadorIndex = jugadores.findIndex((jugador) => jugadorId === jugador.id)
-    console.log(jugadores)
 
     if (jugadorIndex >= 0) {
         jugadores[jugadorIndex].actualizarPosicion(x, y)
     }
+
     const enemigos=jugadores.filter((jugador)=>jugadorId!==jugador.id)
     res.send({
         enemigos
