@@ -1,0 +1,194 @@
+/*SELECTORES*/
+/*CLASS: Porque trabajamos con un class usamos .nombredelaclase*/
+/*ID: Si trabajamos con id, debemos usar #nombredeid*/ 
+
+
+/*
+EXPERIMENTAMOS
+
+label { Elemento con display inline por defecto
+    background-color: tomato;
+    width: 312px; ANCHO
+    height: 50px; ALTO
+}
+
+input { Elemento con display inlineblock por defecto
+    background-color: aqua;
+    width: 312px; ANCHO
+    height: 50px; ALTO
+}
+
+button { Elemento con display inlineblock por defecto
+    background-color: violet;
+    width: 312px; ANCHO
+    height: 50px; ALTO
+}*/
+
+/*FLEXBOX:
+Podemos alinear elementos de forma vertical u orizontal, Es una dimension de prop que trabajan juntas
+
+Contenedores(elemento padre)  -- Elementos(elemento hijo)
+-----------------------------------------------------------
+Etiquetas que tienene            No contiene nada dentro
+elementos por dentro
+Si son padres e hijos pueden usar ambas propiedades.
+
+se usa con: displayflex*/
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Dosis:wght@300&display=swap');
+
+body {
+    font-family: 'Chakra Petch', sans-serif;
+    background-color: #FDCEDF;
+}
+
+#seleccionar-mascota {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo { 
+    font-family: 'Dosis', sans-serif;
+    color: white;
+    font-size: 32px;
+}
+
+.subtitulo {
+    color: white;
+    font-size: 20px;
+}
+
+.tarjetas, .tarjetas-ataques {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+.tarjeta-de-mokepon {
+    width: 180px;
+    height: 100px;
+    background: #F8E8EE;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F2BED1;
+}
+
+.tarjeta-de-mokepon
+img {
+    width: 80px;
+}
+
+#boton-mascota {
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border: 2px solid #d17296;
+    color: #d17296;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+/* circulos para seleccionar */
+input {
+    display: none; 
+}
+
+input:checked + label {
+    background-color: #46458C;
+}
+
+#seleccionar-ataque {
+    flex-direction: column;
+    align-items: center
+}
+
+.boton-de-ataque {
+    background-color: transparent;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border-color: #46458C;
+    width: 100px;
+    color: #d17296;
+}
+
+#mensajes {
+    width: 280px;
+    background: #F2BED1;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#boton-reiniciar {
+    border: transparent;
+    color: #d17296;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.ataques {
+    display: grid;
+    grid-template-columns: 200px 200px;
+}
+
+#vidas-jugador, #vidas-enemigo {
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+.ataques-jugador, .ataques-enemigo {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+#ver-mapa {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#ver-mapa button {
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px 0;
+    border: 2px solid #d17296;
+    color: #d17296;
+    font-family: 'Chakra Petch', sans-serif;
+    user-select: none;
+}
+
+/* Para dispositivos pequeños */
+@media (max-width: 560px) { 
+    .tarjetas, .tarjetas-ataques {
+    flex-direction: column;
+    }
+}
+
+@media (max-width: 300px) { 
+    #ver-mapa div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
